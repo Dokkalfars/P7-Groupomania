@@ -9,6 +9,9 @@
   "author": "Pluchart Timothée",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.6.2"
   }
 }
