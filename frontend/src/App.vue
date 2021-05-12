@@ -1,27 +1,25 @@
 <template>
-  <div id="app">
-    <div class="container">
-        <div class="row">
-            <div class="col navbar">
-            </div>
-        </div>
+    <div id="app">
+      <Navbar></Navbar>
+      <router-view></router-view>
     </div>
-    <router-view></router-view>
-  </div>
 </template>
 
 <script>
+import Navbar from "./components/Navbar";
+
 export default {
-    name: "App"
+    name: "App",
+    components: {
+      Navbar
+    }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style>
+  body {
+    background: rgb(36,37,38);
+    background: linear-gradient(90deg, rgba(36,37,38,1) 0%, rgba(24,25,26,1) 100%);
+    color: white;
+  }
 </style>
