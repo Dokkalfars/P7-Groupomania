@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true}));
 
 db.sequelize.sync();
 
-app.use("/images", express.static(path.join(_dirname, "images")));
+app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/api/auth", authRoutes);
 app.use("/api/users", auth, userRoutes);
 

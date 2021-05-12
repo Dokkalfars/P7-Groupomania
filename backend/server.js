@@ -1,4 +1,3 @@
-const { prototype } = require("events");
 const http = require("http");
 const app = require("./app");
 

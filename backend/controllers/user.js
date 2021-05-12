@@ -55,7 +55,7 @@ exports.deleteOneUser = (req, res, next) => {
     } else {
         res.status(401).json({message : " non authorisé "})
     }
-}
+};
 
 exports.deleteMyAccount = (req, res, next) => {
 
@@ -65,4 +65,4 @@ exports.deleteMyAccount = (req, res, next) => {
     User.destroy({ where: { id: req.params.id }}) 
     .then( () => res.status(200).json({message: "ok"}))
     .catch(error => console.log(error))
-}
+};
