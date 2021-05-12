@@ -5,7 +5,12 @@ const routes = [
     path: "/",
         name: "Connexion",
         component: () => import("../views/Connexion"),
-  }
+  },
+  {
+    path: "/inscription",
+    name: "Inscription",
+    component: () => import("../views/Inscription")
+}
 ]
 
 const router = createRouter({
