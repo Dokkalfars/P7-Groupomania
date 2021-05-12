@@ -11,6 +11,8 @@ const db = require("./models");
 
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
+const messageRoutes = require("./routes/message");
+const commentRoutes = require("./routes/comments");
 
 app.use(helmet());
 app.use(cors());
@@ -23,5 +25,8 @@ db.sequelize.sync();
 app.use("/images", express.static(path.join(_dirname, "images")));
 app.use("/api/auth", authRoutes);
 app.use("/api/users", auth, userRoutes);
+
+app.use("/api/messages", auth, messageRoutes);
+app.use("/api/comments", auth, commentRoutes);
 
 module.exports = app;

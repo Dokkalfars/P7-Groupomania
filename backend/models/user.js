@@ -1,9 +1,9 @@
-const { Model } = require("sequilize")
+const { Model } = require("sequelize")
 
 module.exports = (sequelize, DataTypes) => {
-    class User extends Model{}
+    class User extends Model {}
     User.init({
-        username: {
+        userName: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: false
         }
-    },
+    }, 
     {
         sequelize,
         modelName: "User"
