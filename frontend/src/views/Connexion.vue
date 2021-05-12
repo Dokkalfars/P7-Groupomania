@@ -1,10 +1,9 @@
 <template>
     <main class="container">
          <!-- une seule section contenant le module de connexion -->
-        <section class="col-12 col-md-8 mt-5 mx-auto p-3 bg-light rounded">  
+        <section class="col-12 col-md-8 mt-5 mx-auto p-3 rounded">  
             <form @submit.prevent="handleSubmit">
-                <p class="text-center"><img  src="../assets/login.svg" alt="login_svg" style="width:10rem" /></p>
-                <h1 class="text-center font-weight-bold" style="font-size:4vw;">CONNEXION</h1>
+                <h1 class="text-center font-weight-bold" id="title">CONNEXION</h1>
                 <div class="form-group mt-3">
                     <label for="inputEmail">Email:</label>
                     <input v-on:keydown="isInvalid = false" v-model="inputEmail" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="votre email">    
@@ -12,7 +11,7 @@
                 <div class="form-group mt-3">
                     <label for="inputPassword">Mot de passe:</label>
                     <input v-on:keydown="isInvalid = false" v-model="inputPassword" type="password" class="form-control" id="inputPassword" aria-describedby="passwordHelp" placeholder="votre mot de passe">                        
-                    <span id="passwordHelp" class="form-text font-italic">Mot de passe oublié ? </span>
+                    <span id="passwordHelp" class="form-text font-italic">mot de passe oublié ?</span>
                 </div>
                 <button type="submit" class="btn btn-primary mt-5 w-100 shadow contrastBoutonVert font-weight-bold">SE CONNECTER</button>
             </form>
@@ -67,3 +66,10 @@ export default {
     }
 }    
 </script>
+
+<style>
+#title {
+    font-size:4vw;
+    color: white;
+}
+</style>

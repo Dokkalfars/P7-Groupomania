@@ -1,10 +1,9 @@
 <template>
     <main class="container">
          <!-- un seul bloc contenant le module d'inscription -->
-        <section class="col-12 col-md-8 mt-5 mx-auto p-3 bg-light rounded">
+        <section class="col-12 col-md-8 mt-5 mx-auto p-3 rounded">
             <form @submit.prevent="sendForm(event)">
-                <p class="text-center m-2"> <img src="../assets/signup.svg" alt="signup svg" style="width:10rem"> </p>
-                <h1 class="text-center font-weight-bold" style="font-size:4vw;" >INSCRIPTION</h1>
+                <h1 class="text-center font-weight-bold" id="title" >INSCRIPTION</h1>
                 <div class="form-group">
                     <label for="inputUserName">Nom d'utilisateur:</label>
                     <input v-on:keydown="invalid = false" v-model="inputUserName" type="text" class="form-control" id="inputUserName" aria-describedby="userNameHelp" placeholder="Entrez votre nom">
@@ -78,3 +77,9 @@ export default {
     }
 }    
 </script>
+
+<style>
+#title {
+    font-size:4vw;
+}
+</style>
